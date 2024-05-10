@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> common/table/Table.jsx</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Документация к фронтенду</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="Checkbox.html">Checkbox</a></li><li><a href="DefaultColumnFilter.html">DefaultColumnFilter</a></li><li><a href="DownloadTable.html">DownloadTable</a></li><li><a href="Header.html">Header</a></li><li><a href="Input.html">Input</a></li><li><a href="Popup.html">Popup</a></li><li><a href="RadioButtons.html">RadioButtons</a></li><li><a href="Table.html">Table</a></li><li><a href="Tooltip.html">Tooltip</a></li><li><a href="UserDropdown.html">UserDropdown</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>common/table/Table.jsx</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import classNames from "classnames";
+import styles from "./Table.module.css";
+import { useSortBy, useTable, useFilters } from "react-table";
+import { useMemo } from "react";
+import PropTypes from "prop-types";
+import global_styles from "../../../styles/global.module.css";
+import SortUp from "../../../assets/icons/sort-up";
+import SortDown from "../../../assets/icons/sort-down";
+import SortDefault from "../../../assets/icons/sort-default";
+import DefaultColumnFilter from "./DefaultColumnFilter/DefaultColumnFilter";
+import { useDispatch } from "react-redux";
+import { toggleIsFiltered } from "../../../store/globalSlice";
+
+/**
+ * Компонент таблицы
+ * @component
+ */
+const Table = ({
+  data,
+  columns,
+  isSorted,
+  isFiltered,
+  firstColumnSticky,
+  autoWidth,
+  className,
+  center,
+}) => {
+  const dispatcher = useDispatch();
+
+  if (!isSorted) {
+    columns.forEach((column) => {
+      column["disableSortBy"] = true;
+    });
+  }
+
+  if (!isFiltered) {
+    columns.forEach((column) => {
+      column["disableFilters"] = true;
+    });
+  }
+
+  /**
+   * Функция возврата даты
+   * @param {string} dateString Идентификатор столбца
+   * @returns {Date}
+   */
+  const dateFormat = (dateString) => {
+    const splitDate = dateString.split(".");
+    return new Date(splitDate[2], splitDate[1], splitDate[0]).getTime();
+  };
+
+  const sortTypes = {
+    date: (rowA, rowB, columnId) => {
+      const [a, b] = [rowA.values[columnId], rowB.values[columnId]];
+
+      return dateFormat(a) > dateFormat(b) ? 1 : -1;
+    },
+  };
+
+  /**
+   * Функция фильтра с множественным выбором
+   * @param {array} rows Все строки таблицы
+   * @param {string} columnId Идентификатор столбца
+   * @param {array} filter Фильтр
+   * @returns {array}
+   */
+  const multiSelectFilter = (rows, columnId, filter) => {
+    if (filter.length === 0) {
+      return rows;
+    } else {
+      return rows.filter((row) => {
+        if (typeof row.original[columnId] === "string") {
+          return filter.includes(`${row.original[columnId]}`);
+        } else if (
+          row.original[columnId].props &amp;&amp;
+          typeof row.original[columnId].props.children === "string"
+        ) {
+          return filter.includes(`${row.original[columnId].props.children}`);
+        }
+      });
+    }
+  };
+
+  /**
+   * Функция возврата ширины столбца
+   * @param {string} id Идентификатор столбца
+   * @returns {object}
+   */
+  const getColumnWidthStyle = (id) => {
+    const column = headerGroups[0].headers.find((el) => el.id === id);
+    return {
+      width: column.width ? `${column.width}px` : "auto",
+      minWidth: column.width ? `${column.width}px` : "auto",
+      maxWidth: "none",
+    };
+  };
+
+  const memorizedColumns = useMemo(
+    () => columns.map((column) => ({ ...column, filter: multiSelectFilter })),
+    [columns]
+  );
+
+  const defaultColumn = {
+    Filter: DefaultColumnFilter,
+    filter: "text",
+  };
+
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable(
+      { columns: memorizedColumns, data, sortTypes, defaultColumn },
+      useFilters,
+      useSortBy
+    );
+
+  return (
+    &lt;div
+      className={classNames(
+        global_styles.white_rounded_box,
+        styles.hidden_box,
+        className
+      )}
+    >
+      &lt;div className={classNames(styles.container, "table_container")}>
+        &lt;table
+          {...getTableProps()}
+          className={classNames(styles.table, {
+            [styles.sticky]: firstColumnSticky,
+          })}
+        >
+          &lt;thead>
+            {headerGroups.map((headerGroup) => (
+              &lt;tr {...headerGroup.getHeaderGroupProps()}>
+                {headerGroup.headers.map((column, i) => (
+                  &lt;th
+                    {...column.getHeaderProps()}
+                    key={i}
+                    className={column.id}
+                    style={!autoWidth ? getColumnWidthStyle(column.id) : {}}
+                  >
+                    &lt;div
+                      style={!autoWidth ? getColumnWidthStyle(column.id) : {}}
+                    >
+                      {column.render("Header")}
+                      {column.canSort &amp;&amp; (
+                        &lt;button
+                          className={styles.sort_btn}
+                          {...column.getHeaderProps(
+                            column.getSortByToggleProps()
+                          )}
+                          onClick={(e) => {
+                            column
+                              .getHeaderProps(column.getSortByToggleProps())
+                              .onClick(e);
+                            dispatcher(toggleIsFiltered());
+                          }}
+                        >
+                          {column.isSorted ? (
+                            column.isSortedDesc ? (
+                              &lt;SortUp />
+                            ) : (
+                              &lt;SortDown />
+                            )
+                          ) : (
+                            &lt;SortDefault />
+                          )}
+                        &lt;/button>
+                      )}
+                      {column.canFilter &amp;&amp; &lt;div>{column.render("Filter")}&lt;/div>}
+                    &lt;/div>
+                  &lt;/th>
+                ))}
+              &lt;/tr>
+            ))}
+          &lt;/thead>
+          &lt;tbody {...getTableBodyProps()}>
+            {rows.map((row) => {
+              prepareRow(row);
+              return (
+                &lt;tr {...row.getRowProps()}>
+                  {row.cells.map((cell, i) => (
+                    &lt;td
+                      {...cell.getCellProps()}
+                      key={i}
+                      style={
+                        !autoWidth
+                          ? getColumnWidthStyle(headerGroups[0].headers[i].id)
+                          : {}
+                      }
+                    >
+                      &lt;div
+                        className={classNames({
+                          [styles.center]: center,
+                        })}
+                        style={
+                          !autoWidth
+                            ? getColumnWidthStyle(headerGroups[0].headers[i].id)
+                            : {}
+                        }
+                      >
+                        {cell.render("Cell")}
+                      &lt;/div>
+                    &lt;/td>
+                  ))}
+                &lt;/tr>
+              );
+            })}
+          &lt;/tbody>
+        &lt;/table>
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+Table.propTypes = {
+  /**
+   * Данные таблицы
+   */
+  data: PropTypes.array.isRequired,
+  /**
+   * Колонки таблицы
+   */
+  columns: PropTypes.array.isRequired,
+  /**
+   * Флаг сортировки (Если false, то в таблице будет отключена вся сортировка)
+   */
+  isSorted: PropTypes.bool,
+  /**
+   * Флаг фильтрации (Если false, то в таблице будет отключена вся фильтрация)
+   */
+  isFiltered: PropTypes.bool,
+  /**
+   * Флаг закрепления первого столбца
+   */
+  firstColumnSticky: PropTypes.bool,
+  /**
+   * Флаг автоматической ширины столбцов
+   */
+  autoWidth: PropTypes.bool,
+  /**
+   * Дополнительный класс
+   */
+  className: PropTypes.string,
+  /**
+   * Флаг центрирования содержимого таблицы
+   */
+  center: PropTypes.bool,
+};
+
+export default Table;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>
