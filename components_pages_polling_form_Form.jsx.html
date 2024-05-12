@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> components/pages/polling/form/Form.jsx</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Документация к фронтенду SmartTime</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="AlertBusyAuditorium.html">AlertBusyAuditorium</a></li><li><a href="AlertUnexeptableGroupTime.html">AlertUnexeptableGroupTime</a></li><li><a href="AlertUnexeptableTeacherTime.html">AlertUnexeptableTeacherTime</a></li><li><a href="AlertWrongDate.html">AlertWrongDate</a></li><li><a href="App.html">App</a></li><li><a href="Auditorium.html">Auditorium</a></li><li><a href="Card.html">Card</a></li><li><a href="CellDropdown.html">CellDropdown</a></li><li><a href="ChangeAuditorium.html">ChangeAuditorium</a></li><li><a href="ChangeDate.html">ChangeDate</a></li><li><a href="ChangeEndTime.html">ChangeEndTime</a></li><li><a href="ChangeFormat.html">ChangeFormat</a></li><li><a href="ChangeNote.html">ChangeNote</a></li><li><a href="ChangeStartTime.html">ChangeStartTime</a></li><li><a href="Checkbox.html">Checkbox</a></li><li><a href="CheckboxRestrictions.html">CheckboxRestrictions</a></li><li><a href="CheckboxWorkload.html">CheckboxWorkload</a></li><li><a href="Collapsible.html">Collapsible</a></li><li><a href="DatePicker.html">DatePicker</a></li><li><a href="DefaultColumnFilter.html">DefaultColumnFilter</a></li><li><a href="DownloadTable.html">DownloadTable</a></li><li><a href="Dropdown.html">Dropdown</a></li><li><a href="DropdownHide.html">DropdownHide</a></li><li><a href="EditSchedule.html">EditSchedule</a></li><li><a href="Features.html">Features</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Form.html">Form</a></li><li><a href="Guides.html">Guides</a></li><li><a href="Header.html">Header</a></li><li><a href="Help.html">Help</a></li><li><a href="HideColumns.html">HideColumns</a></li><li><a href="Home.html">Home</a></li><li><a href="Input.html">Input</a></li><li><a href="Instruction.html">Instruction</a></li><li><a href="Login.html">Login</a></li><li><a href="MyEventComponent.html">MyEventComponent</a></li><li><a href="MyEventWrapperComponentDraggable.html">MyEventWrapperComponentDraggable</a></li><li><a href="MyRange.html">MyRange</a></li><li><a href="Page404.html">Page404</a></li><li><a href="Parameters.html">Parameters</a></li><li><a href="Planner.html">Planner</a></li><li><a href="Polling.html">Polling</a></li><li><a href="Popup.html">Popup</a></li><li><a href="Question.html">Question</a></li><li><a href="RadioButtons.html">RadioButtons</a></li><li><a href="RedirectToLogin.html">RedirectToLogin</a></li><li><a href="Restrictions.html">Restrictions</a></li><li><a href="Results.html">Results</a></li><li><a href="ResultsParameters.html">ResultsParameters</a></li><li><a href="ResultsRestrictions.html">ResultsRestrictions</a></li><li><a href="Root.html">Root</a></li><li><a href="Schedule.html">Schedule</a></li><li><a href="ScrollablePage.html">ScrollablePage</a></li><li><a href="SetDate.html">SetDate</a></li><li><a href="Settings.html">Settings</a></li><li><a href="Sidebar.html">Sidebar</a></li><li><a href="StaticPage.html">StaticPage</a></li><li><a href="Table.html">Table</a></li><li><a href="TeacherDropdown.html">TeacherDropdown</a></li><li><a href="TokenPopup.html">TokenPopup</a></li><li><a href="Tools.html">Tools</a></li><li><a href="Tooltip.html">Tooltip</a></li><li><a href="Topbar.html">Topbar</a></li><li><a href="UserCellDropdown.html">UserCellDropdown</a></li><li><a href="UserDropdown.html">UserDropdown</a></li><li><a href="Users.html">Users</a></li><li><a href="Workload.html">Workload</a></li><li><a href="WorkloadUpload.html">WorkloadUpload</a></li></ul><h3>Global</h3><ul><li><a href="global.html#calcWidth">calcWidth</a></li><li><a href="global.html#encodeQuery">encodeQuery</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#getAuditoriums">getAuditoriums</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getCurrentModuleInfo">getCurrentModuleInfo</a></li><li><a href="global.html#getExams">getExams</a></li><li><a href="global.html#getForms">getForms</a></li><li><a href="global.html#getHeaders">getHeaders</a></li><li><a href="global.html#getLinks">getLinks</a></li><li><a href="global.html#getLogout">getLogout</a></li><li><a href="global.html#getModuleInfo">getModuleInfo</a></li><li><a href="global.html#getModules">getModules</a></li><li><a href="global.html#getRestrctions">getRestrctions</a></li><li><a href="global.html#getResultsParameters">getResultsParameters</a></li><li><a href="global.html#getResultsRestrctions">getResultsRestrctions</a></li><li><a href="global.html#getRoutes">getRoutes</a></li><li><a href="global.html#getTable">getTable</a></li><li><a href="global.html#getTeachers">getTeachers</a></li><li><a href="global.html#getUserInfo">getUserInfo</a></li><li><a href="global.html#getUserToken">getUserToken</a></li><li><a href="global.html#getUsers">getUsers</a></li><li><a href="global.html#getWorkloads">getWorkloads</a></li><li><a href="global.html#linkSort">linkSort</a></li><li><a href="global.html#makeTooltip">makeTooltip</a></li><li><a href="global.html#patch">patch</a></li><li><a href="global.html#patchExam">patchExam</a></li><li><a href="global.html#patchUserRole">patchUserRole</a></li><li><a href="global.html#patchWorkload">patchWorkload</a></li><li><a href="global.html#post">post</a></li><li><a href="global.html#postCSV">postCSV</a></li><li><a href="global.html#postForm">postForm</a></li><li><a href="global.html#postLoginToUser">postLoginToUser</a></li><li><a href="global.html#toLessons">toLessons</a></li><li><a href="global.html#toRuFormat">toRuFormat</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>components/pages/polling/form/Form.jsx</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import classNames from "classnames";
+import styles from "./Form.module.css";
+
+import global_styles from "../../../../styles/global.module.css";
+import ScrollablePage from "../../common/scrollablePage/ScrollablePage";
+import { useSelector } from "react-redux";
+import TeacherDropdown from "./teacherDropdown/TeacherDropdown";
+import Collapsible from "./collapsible/Collapsible";
+import Restrictions from "./restrictions/Resctrictions";
+import Parameters from "./parameters/Parameters";
+import { postForm } from "./requests";
+import CheckboxRestrictions from "./restrictions/checkboxRestrictions/CheckboxRestrictions";
+import { useLocation, useSearchParams } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { getModuleInfo } from "../requests";
+import Popup from "../../../common/popup/Popup";
+import { getUserInfo } from "../../../../services/request";
+
+/**
+ * Компонент страницы Анкета
+ * @component
+ */
+const Form = () => {
+  const [moduleInfo, setModuleInfo] = useState({});
+  const [userInfo, setUserInfo] = useState({});
+  const [isVisible, setIsVisible] = useState(false);
+  const [header, setHeader] = useState("Завершение анкеты");
+  const [text, setText] = useState("Анкета успешно сохранена");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const user = useMemo(
+    () => (searchParams.get("user") ? `${searchParams.get("user")}` : null),
+    [searchParams]
+  );
+
+  const formats = useSelector((state) => state.polling.localData);
+  const restrictions = useSelector((state) => state.polling.restrictions);
+  const noExams = useSelector((state) => state.polling.noExams);
+  const module = useLocation().pathname.split("/").pop();
+  const selectedRole = localStorage.getItem("selectedRole");
+
+  useEffect(() => {
+    getModuleInfo(module).then((info) => setModuleInfo(info));
+    getUserInfo().then((info) => setUserInfo(info));
+  }, []);
+
+  /**
+   * Функция переключения видимости всплывающего окна
+   */
+  const toggle = () => {
+    setIsVisible(!isVisible);
+  };
+
+  /**
+   * Функция проверки заполнености всех необходимых параметров экзамена
+   * @param {array} formats Параметры экзаменов
+   * @returns {boolean} Флаг, показывающий, заполнены ли все необходимые параметры экзамена
+   */
+  const checkFullFilled = (formats) => {
+    let cnt = 0;
+    formats.forEach((format) => {
+      if (
+        format.editable &amp;&amp;
+        !(
+          format.unit_id &amp;&amp;
+          format.format &amp;&amp;
+          format.duration &amp;&amp;
+          format.room_type
+        )
+      ) {
+        cnt += 1;
+      }
+    });
+    return cnt === 0;
+  };
+
+  /**
+   * Функция проверки на достаточное количество свободного времени у преподавателя для проведения экзаменов
+   * @param {array} formats Параметры экзаменов
+   * @param {object} restrictions Ограничения преподавателя
+   * @returns {boolean} Флаг, показывающий, достаточно ли свободного времени у преподавателя для проведения экзаменов
+   */
+  const checkEnoughTime = (formats, restrictions) => {
+    let allExamDuration = 0;
+    formats.forEach((el) => {
+      allExamDuration += el.duration ? Number(el.duration.slice(0, 1)) : 0;
+    });
+
+    const allDays =
+      Object.keys(restrictions).length - restrictions["disabled"].length - 1;
+    let uncomfortablePairs = 0;
+    Object.keys(restrictions).forEach((key) => {
+      if (key !== "disabled") {
+        if (restrictions[key].includes(0)) {
+          uncomfortablePairs += 7;
+        } else {
+          uncomfortablePairs += restrictions[key].length;
+        }
+      }
+    });
+
+    const availableExamDuration = allDays * 7 - uncomfortablePairs;
+
+    return availableExamDuration >= 2 * allExamDuration;
+  };
+
+  /**
+   * Функция сохранения и отправки анкеты
+   */
+  const saveForm = () => {
+    const isFullFilled = checkFullFilled(formats);
+    const isEnoughTime = checkEnoughTime(formats, restrictions);
+    if (!isFullFilled) {
+      setHeader("Предупреждение");
+      setText("Вы заполнили не все поля");
+      setIsVisible(true);
+    } else if (!isEnoughTime) {
+      setHeader("Предупреждение");
+      setText(
+        "Количество пар, в которое Вы можете принимать экзамен, должно быть как минимум в 2 раза больше общей продолжительности всех Ваших экзаменов"
+      );
+      setIsVisible(true);
+    } else {
+      const { disabled, ...newRestrictions } = restrictions;
+      postForm(
+        formats,
+        newRestrictions,
+        moduleInfo.year,
+        moduleInfo.number,
+        user
+      ).then((data) => {
+        if (data.formats.success &amp;&amp; data.excluded_schedule.success) {
+          setHeader("Завершение анкеты");
+          setText("Анкета успешно сохранена");
+        } else {
+          setHeader("Ошибка");
+          setText("Произошла ошибка");
+        }
+        setIsVisible(true);
+      });
+    }
+  };
+
+  return (
+    &lt;ScrollablePage>
+      &lt;div className={styles.content}>
+        &lt;div
+          className={classNames(global_styles.white_rounded_box, styles.intro)}
+        >
+          &lt;div className={styles.intro_header}>
+            &lt;div>Здравствуйте,&lt;/div>
+            {selectedRole === "Преподаватель" ? (
+              &lt;div className={styles.fio_container}>{userInfo.fio}&lt;/div>
+            ) : (
+              &lt;TeacherDropdown />
+            )}
+          &lt;/div>
+          &lt;div className={styles.intro_text}>
+            &lt;p>
+              В данной форме просим Вас сообщить о своих ограничениях, которые
+              необходимо учесть при составлении расписания сессии{" "}
+              {moduleInfo.number} модуля {moduleInfo.year}/{moduleInfo.year + 1}{" "}
+              учебного года. Экзамены пройдут{" "}
+              &lt;span>
+                c {new Date(moduleInfo.session_start).toLocaleDateString()} по{" "}
+                {new Date(moduleInfo.session_end).toLocaleDateString()}.
+              &lt;/span>{" "}
+              В форму будут включены все экзамены в соответствии с Вашей учебной
+              нагрузкой.
+            &lt;/p>
+            &lt;p>
+              Обращаем Ваше внимание, что направленные заявки в данной форме
+              являются приоритетными по составлению расписания в сравнении с
+              другими видами обращений.
+            &lt;/p>
+            &lt;p>
+              Сбор пожеланий осуществляется{" "}
+              &lt;span>
+                до {new Date(moduleInfo.survey_end).toLocaleDateString()} до
+                23:59
+              &lt;/span>
+              .
+            &lt;/p>
+          &lt;/div>
+        &lt;/div>
+
+        &lt;Collapsible label="Инструкция" isOpen={true}>
+          &lt;div className={styles.instruction}>
+            &lt;p>
+              В самом начале анкетирования расположена таблица с днями сессии по
+              горизонтали и временами пар по вертикали. Она заполняется{" "}
+              &lt;span>для всех дисциплин сразу&lt;/span>. Вам необходимо выбрать
+              время, когда Вам &lt;span>не удобно&lt;/span> принимать экзамены. Также
+              можно выбрать целый день, когда нет возможности принимать
+              экзамены. Просьба делать выбор обдуманно без использования
+              максимального количества ограничений.
+            &lt;/p>
+            &lt;br />
+            &lt;p>
+              Следующая анкета включает в себя{" "}
+              &lt;span>
+                опросную форму отдельно по каждой дисциплине для каждой
+                образовательной программы
+              &lt;/span>
+              . Необходимо выбрать только один вариант ответа для каждого пункта
+              вопросов:
+            &lt;/p>
+            &lt;ol>
+              &lt;li>
+                Формат проведения экзамена:
+                &lt;ul>
+                  &lt;li>Письменный,&lt;/li>
+                  &lt;li>Устный,&lt;/li>
+                  &lt;li>Экзамена нет — выставление оценки по накопленной,&lt;/li>
+                  &lt;li>
+                    Онлайн (для онлайн-программ, безопасности жизнедеятельности
+                    и дисциплин общего цикла).
+                  &lt;/li>
+                &lt;/ul>
+              &lt;/li>
+              &lt;li>
+                Контингент (выбор формат экзамена по численности студентов):
+                &lt;ul>
+                  &lt;li>Поток,&lt;/li>
+                  &lt;li>Группа.&lt;/li>
+                &lt;/ul>
+              &lt;/li>
+              &lt;li>
+                Максимальное количество групп в день: от 2 до 5 – выбор
+                предпочтительного количества групп в день, у которых будет
+                приниматься экзамен.
+              &lt;/li>
+              &lt;li>
+                Продолжительность экзамена (у группы/потока в зависимости от
+                контингента): от 1 до 6 пар – выбор необходимой длительности для
+                приема экзамена.
+              &lt;/li>
+              &lt;li>Тип аудитории:&lt;/li>
+              &lt;ul>
+                &lt;li>Лекционная,&lt;/li>
+                &lt;li>Семинарская,&lt;/li>
+                &lt;li>Компьютерный класс,&lt;/li>
+                &lt;li>Учебная лаборатория,&lt;/li>
+                &lt;li>
+                  Онлайн (для онлайн-программ, безопасности жизнедеятельности и
+                  дисциплин общего цикла).
+                &lt;/li>
+              &lt;/ul>
+              &lt;li>При необходимости можно оставить комментарий к анкете.&lt;/li>
+            &lt;/ol>
+            &lt;br />
+            &lt;p>Кнопка «Сохранить» сохранит Вашу анкету.&lt;/p>
+            &lt;br />
+            &lt;p>
+              При необходимости &lt;span>редактирования&lt;/span> анкеты появляется
+              заполненная ранее форма. Если Вы хотите изменить свой выбор, то
+              необходимо внести данные, а затем нажать кнопку «Сохранить». Новый
+              ответ будет записан. Редактировать анкету можно{" "}
+              &lt;span>до окончания срока заполнения&lt;/span> (до{" "}
+              {new Date(moduleInfo.survey_end).toLocaleDateString()}{" "}
+              включительно).
+            &lt;/p>
+            &lt;br />
+            &lt;p>Благодарим за сотрудничество!&lt;/p>
+          &lt;/div>
+        &lt;/Collapsible>
+
+        {(selectedRole === "Преподаватель" || user) &amp;&amp; (
+          &lt;div
+            className={classNames(styles.wrapper, {
+              [styles.hidden]: noExams,
+            })}
+          >
+            &lt;Collapsible label="Параметры для групп" isOpen={true}>
+              &lt;Parameters />
+            &lt;/Collapsible>
+            &lt;Collapsible
+              label="Ограничения для расписания сессии"
+              isOpen={true}
+            >
+              &lt;div className={styles.restrictions}>
+                &lt;p>
+                  Отметьте в таблице время/дни, в которые Вы{" "}
+                  &lt;span>НЕ МОЖЕТЕ&lt;/span> принимать экзамены.
+                &lt;/p>
+                &lt;div className={styles.checkboxes}>
+                  &lt;div>
+                    &lt;CheckboxRestrictions
+                      checked={false}
+                      disabled={true}
+                      isClose={true}
+                    />{" "}
+                    - могу
+                  &lt;/div>
+                  &lt;div>
+                    &lt;CheckboxRestrictions
+                      checked={true}
+                      disabled={true}
+                      isClose={true}
+                    />{" "}
+                    - не могу
+                  &lt;/div>
+                &lt;/div>
+                &lt;Restrictions />
+              &lt;/div>
+            &lt;/Collapsible>
+            &lt;div
+              className={classNames(
+                styles.save_container,
+                global_styles.white_rounded_box
+              )}
+            >
+              &lt;button className={global_styles.btn_orange} onClick={saveForm}>
+                Сохранить
+              &lt;/button>
+
+              {isVisible &amp;&amp; (
+                &lt;Popup
+                  headerTitle={header}
+                  isActive={isVisible}
+                  setActive={toggle}
+                >
+                  &lt;div className={styles.popup_body}>
+                    &lt;div>{text}&lt;/div>
+                    &lt;button
+                      className={classNames(global_styles.btn_orange)}
+                      onClick={toggle}
+                    >
+                      Продолжить
+                    &lt;/button>
+                  &lt;/div>
+                &lt;/Popup>
+              )}
+            &lt;/div>
+          &lt;/div>
+        )}
+
+        {noExams &amp;&amp; (
+          &lt;div className={styles.no_exams}>
+            У Вас нет экзаменов в этом модуле
+          &lt;/div>
+        )}
+      &lt;/div>
+    &lt;/ScrollablePage>
+  );
+};
+
+export default Form;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

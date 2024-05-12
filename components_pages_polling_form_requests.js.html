@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> components/pages/polling/form/requests.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Документация к фронтенду SmartTime</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="AlertBusyAuditorium.html">AlertBusyAuditorium</a></li><li><a href="AlertUnexeptableGroupTime.html">AlertUnexeptableGroupTime</a></li><li><a href="AlertUnexeptableTeacherTime.html">AlertUnexeptableTeacherTime</a></li><li><a href="AlertWrongDate.html">AlertWrongDate</a></li><li><a href="App.html">App</a></li><li><a href="Auditorium.html">Auditorium</a></li><li><a href="Card.html">Card</a></li><li><a href="CellDropdown.html">CellDropdown</a></li><li><a href="ChangeAuditorium.html">ChangeAuditorium</a></li><li><a href="ChangeDate.html">ChangeDate</a></li><li><a href="ChangeEndTime.html">ChangeEndTime</a></li><li><a href="ChangeFormat.html">ChangeFormat</a></li><li><a href="ChangeNote.html">ChangeNote</a></li><li><a href="ChangeStartTime.html">ChangeStartTime</a></li><li><a href="Checkbox.html">Checkbox</a></li><li><a href="CheckboxRestrictions.html">CheckboxRestrictions</a></li><li><a href="CheckboxWorkload.html">CheckboxWorkload</a></li><li><a href="Collapsible.html">Collapsible</a></li><li><a href="DatePicker.html">DatePicker</a></li><li><a href="DefaultColumnFilter.html">DefaultColumnFilter</a></li><li><a href="DownloadTable.html">DownloadTable</a></li><li><a href="Dropdown.html">Dropdown</a></li><li><a href="DropdownHide.html">DropdownHide</a></li><li><a href="EditSchedule.html">EditSchedule</a></li><li><a href="Features.html">Features</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Form.html">Form</a></li><li><a href="Guides.html">Guides</a></li><li><a href="Header.html">Header</a></li><li><a href="Help.html">Help</a></li><li><a href="HideColumns.html">HideColumns</a></li><li><a href="Home.html">Home</a></li><li><a href="Input.html">Input</a></li><li><a href="Instruction.html">Instruction</a></li><li><a href="Login.html">Login</a></li><li><a href="MyEventComponent.html">MyEventComponent</a></li><li><a href="MyEventWrapperComponentDraggable.html">MyEventWrapperComponentDraggable</a></li><li><a href="MyRange.html">MyRange</a></li><li><a href="Page404.html">Page404</a></li><li><a href="Parameters.html">Parameters</a></li><li><a href="Planner.html">Planner</a></li><li><a href="Polling.html">Polling</a></li><li><a href="Popup.html">Popup</a></li><li><a href="Question.html">Question</a></li><li><a href="RadioButtons.html">RadioButtons</a></li><li><a href="RedirectToLogin.html">RedirectToLogin</a></li><li><a href="Restrictions.html">Restrictions</a></li><li><a href="Results.html">Results</a></li><li><a href="ResultsParameters.html">ResultsParameters</a></li><li><a href="ResultsRestrictions.html">ResultsRestrictions</a></li><li><a href="Root.html">Root</a></li><li><a href="Schedule.html">Schedule</a></li><li><a href="ScrollablePage.html">ScrollablePage</a></li><li><a href="SetDate.html">SetDate</a></li><li><a href="Settings.html">Settings</a></li><li><a href="Sidebar.html">Sidebar</a></li><li><a href="StaticPage.html">StaticPage</a></li><li><a href="Table.html">Table</a></li><li><a href="TeacherDropdown.html">TeacherDropdown</a></li><li><a href="TokenPopup.html">TokenPopup</a></li><li><a href="Tools.html">Tools</a></li><li><a href="Tooltip.html">Tooltip</a></li><li><a href="Topbar.html">Topbar</a></li><li><a href="UserCellDropdown.html">UserCellDropdown</a></li><li><a href="UserDropdown.html">UserDropdown</a></li><li><a href="Users.html">Users</a></li><li><a href="Workload.html">Workload</a></li><li><a href="WorkloadUpload.html">WorkloadUpload</a></li></ul><h3>Global</h3><ul><li><a href="global.html#calcWidth">calcWidth</a></li><li><a href="global.html#encodeQuery">encodeQuery</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#getAuditoriums">getAuditoriums</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getCurrentModuleInfo">getCurrentModuleInfo</a></li><li><a href="global.html#getExams">getExams</a></li><li><a href="global.html#getForms">getForms</a></li><li><a href="global.html#getHeaders">getHeaders</a></li><li><a href="global.html#getLinks">getLinks</a></li><li><a href="global.html#getLogout">getLogout</a></li><li><a href="global.html#getModuleInfo">getModuleInfo</a></li><li><a href="global.html#getModules">getModules</a></li><li><a href="global.html#getRestrctions">getRestrctions</a></li><li><a href="global.html#getResultsParameters">getResultsParameters</a></li><li><a href="global.html#getResultsRestrctions">getResultsRestrctions</a></li><li><a href="global.html#getRoutes">getRoutes</a></li><li><a href="global.html#getTable">getTable</a></li><li><a href="global.html#getTeachers">getTeachers</a></li><li><a href="global.html#getUserInfo">getUserInfo</a></li><li><a href="global.html#getUserToken">getUserToken</a></li><li><a href="global.html#getUsers">getUsers</a></li><li><a href="global.html#getWorkloads">getWorkloads</a></li><li><a href="global.html#linkSort">linkSort</a></li><li><a href="global.html#makeTooltip">makeTooltip</a></li><li><a href="global.html#patch">patch</a></li><li><a href="global.html#patchExam">patchExam</a></li><li><a href="global.html#patchUserRole">patchUserRole</a></li><li><a href="global.html#patchWorkload">patchWorkload</a></li><li><a href="global.html#post">post</a></li><li><a href="global.html#postCSV">postCSV</a></li><li><a href="global.html#postForm">postForm</a></li><li><a href="global.html#postLoginToUser">postLoginToUser</a></li><li><a href="global.html#toLessons">toLessons</a></li><li><a href="global.html#toRuFormat">toRuFormat</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>components/pages/polling/form/requests.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { get, post } from "../../../../services/request";
+import { momentLocalizer } from "react-big-calendar";
+import moment from "moment";
+import "moment/locale/ru";
+
+moment.locale("ru");
+const localizer = momentLocalizer(moment);
+
+const duration = {
+  1: "1 пара",
+  2: "2 пары",
+  3: "3 пары",
+  4: "4 пары",
+  5: "5 пар",
+  6: "6 пар",
+};
+
+const deduration = {
+  "1 пара": 1,
+  "2 пары": 2,
+  "3 пары": 3,
+  "4 пары": 4,
+  "5 пар": 5,
+  "6 пар": 6,
+};
+
+/**
+ * Функция получения анкет по указанному году, номеру модуля и преподавателю
+ * @method
+ * @param {number} year Год
+ * @param {number} number Номер модуля
+ * @param {string} user Идентификатор пользователя (преподавателя)
+ * @returns {Promise} Промис с данными об анкетах
+ */
+export const getForms = (year, number, user) => {
+  return get(`/survey`, {
+    year,
+    number,
+    user,
+  })
+    .then((data) => {
+      const newData = [];
+      data.formats
+        .sort((a, b) => a.exam.unit_id - b.exam.unit_id)
+        .forEach((row) => {
+          newData.push({
+            unit_id: row.unit_id,
+            subject_name: row.subject_name,
+            units: row.units,
+            groups: row.groups,
+            course: row.group_course,
+            short_name: row.short_name,
+            duration: duration[row.exam.duration],
+            max_groups_count: row.exam.max_groups_count,
+            format: row.exam.format,
+            room_type: row.exam.room_type,
+            comment: row.exam.comment,
+            is_flow: row.exam.is_flow ? "Поток" : "Группа",
+            editable: row.editable,
+          });
+        });
+      return newData;
+    })
+    .catch(() => []);
+};
+
+/**
+ * Функция получения ограничений преподавателя по указанному году, номеру модуля и преподавателю
+ * @method
+ * @param {number} year Год
+ * @param {number} number Номер модуля
+ * @param {string} user Идентификатор пользователя (преподавателя)
+ * @returns {Promise} Промис с данными об ограничениях преподавателя
+ */
+export const getRestrctions = (year, number, user) => {
+  return get("/survey", {
+    year,
+    number,
+    user,
+  })
+    .then((data) => {
+      const newData = {};
+      data.excluded_schedule.forEach((obj) => {
+        const date = localizer.format(obj.date, "YYYY-MM-DD", "ru-RU");
+        if (newData[date]) {
+          newData[date].push(obj.lesson_number);
+        } else {
+          newData[date] = [obj.lesson_number];
+        }
+        newData[date].sort();
+      });
+
+      for (let key of Object.keys(newData)) {
+        if (newData[key].includes(0)) {
+          newData[key] = [0, 1, 2, 3, 4, 5, 6, 7];
+        }
+      }
+
+      return newData;
+    })
+    .catch(() => {});
+};
+
+/**
+ * Функция отпрвавки анкет и ограничений преподавателя на сервер для сохранения
+ * @method
+ * @param {Array} formats Массив анкет
+ * @param {object} excluded_schedule Объект ограничений преподавателя
+ * @param {number} year Год
+ * @param {number} number Номер модуля
+ * @param {string} user Идентификатор пользователя (преподавателя)
+ * @returns {Promise} Промис
+ */
+export const postForm = (formats, excluded_schedule, year, number, user) => {
+  const newFormats = [];
+  formats.forEach((row) => {
+    if (row.editable) {
+      newFormats.push({
+        unit_id: row.unit_id,
+        duration: deduration[row.duration],
+        max_groups_count:
+          row.is_flow === "Группа" ? row.max_groups_count : null,
+        format: row.format,
+        room_type: row.room_type,
+        is_flow: row.is_flow === "Поток" ? true : false,
+        comment: row.comment,
+        editable: row.editable,
+      });
+    }
+  });
+
+  const newRestrictions = [];
+
+  for (let date of Object.keys(excluded_schedule)) {
+    if (excluded_schedule[date].includes(0)) {
+      newRestrictions.push({
+        date: date,
+        lesson_number: 0,
+      });
+    } else {
+      excluded_schedule[date].forEach((lesson_number) => {
+        newRestrictions.push({
+          date: date,
+          lesson_number: lesson_number,
+        });
+      });
+    }
+  }
+
+  return post(
+    `/survey`,
+    {
+      formats: newFormats,
+      excluded_schedule: newRestrictions,
+    },
+    {
+      year,
+      number,
+      user,
+    }
+  )
+    .then((data) => data)
+    .catch((data) => data);
+};
+
+/**
+ * Функция получения списка преподавателей
+ * @method
+ * @returns {Promise} Промис с данными о преподавателях
+ */
+export const getTeachers = () => {
+  return get("/users").then((data) => {
+    const newData = {};
+    data.forEach((user) => {
+      if (user.roles.includes("Преподаватель")) {
+        newData[user.user_id] = user.fio;
+      }
+    });
+    return newData;
+  });
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>

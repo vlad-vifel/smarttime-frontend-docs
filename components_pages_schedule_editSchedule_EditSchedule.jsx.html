@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> components/pages/schedule/editSchedule/EditSchedule.jsx</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Документация к фронтенду SmartTime</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="AlertBusyAuditorium.html">AlertBusyAuditorium</a></li><li><a href="AlertUnexeptableGroupTime.html">AlertUnexeptableGroupTime</a></li><li><a href="AlertUnexeptableTeacherTime.html">AlertUnexeptableTeacherTime</a></li><li><a href="AlertWrongDate.html">AlertWrongDate</a></li><li><a href="App.html">App</a></li><li><a href="Auditorium.html">Auditorium</a></li><li><a href="Card.html">Card</a></li><li><a href="CellDropdown.html">CellDropdown</a></li><li><a href="ChangeAuditorium.html">ChangeAuditorium</a></li><li><a href="ChangeDate.html">ChangeDate</a></li><li><a href="ChangeEndTime.html">ChangeEndTime</a></li><li><a href="ChangeFormat.html">ChangeFormat</a></li><li><a href="ChangeNote.html">ChangeNote</a></li><li><a href="ChangeStartTime.html">ChangeStartTime</a></li><li><a href="Checkbox.html">Checkbox</a></li><li><a href="CheckboxRestrictions.html">CheckboxRestrictions</a></li><li><a href="CheckboxWorkload.html">CheckboxWorkload</a></li><li><a href="Collapsible.html">Collapsible</a></li><li><a href="DatePicker.html">DatePicker</a></li><li><a href="DefaultColumnFilter.html">DefaultColumnFilter</a></li><li><a href="DownloadTable.html">DownloadTable</a></li><li><a href="Dropdown.html">Dropdown</a></li><li><a href="DropdownHide.html">DropdownHide</a></li><li><a href="EditSchedule.html">EditSchedule</a></li><li><a href="Features.html">Features</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Form.html">Form</a></li><li><a href="Guides.html">Guides</a></li><li><a href="Header.html">Header</a></li><li><a href="Help.html">Help</a></li><li><a href="HideColumns.html">HideColumns</a></li><li><a href="Home.html">Home</a></li><li><a href="Input.html">Input</a></li><li><a href="Instruction.html">Instruction</a></li><li><a href="Login.html">Login</a></li><li><a href="MyEventComponent.html">MyEventComponent</a></li><li><a href="MyEventWrapperComponentDraggable.html">MyEventWrapperComponentDraggable</a></li><li><a href="MyRange.html">MyRange</a></li><li><a href="Page404.html">Page404</a></li><li><a href="Parameters.html">Parameters</a></li><li><a href="Planner.html">Planner</a></li><li><a href="Polling.html">Polling</a></li><li><a href="Popup.html">Popup</a></li><li><a href="Question.html">Question</a></li><li><a href="RadioButtons.html">RadioButtons</a></li><li><a href="RedirectToLogin.html">RedirectToLogin</a></li><li><a href="Restrictions.html">Restrictions</a></li><li><a href="Results.html">Results</a></li><li><a href="ResultsParameters.html">ResultsParameters</a></li><li><a href="ResultsRestrictions.html">ResultsRestrictions</a></li><li><a href="Root.html">Root</a></li><li><a href="Schedule.html">Schedule</a></li><li><a href="ScrollablePage.html">ScrollablePage</a></li><li><a href="SetDate.html">SetDate</a></li><li><a href="Settings.html">Settings</a></li><li><a href="Sidebar.html">Sidebar</a></li><li><a href="StaticPage.html">StaticPage</a></li><li><a href="Table.html">Table</a></li><li><a href="TeacherDropdown.html">TeacherDropdown</a></li><li><a href="TokenPopup.html">TokenPopup</a></li><li><a href="Tools.html">Tools</a></li><li><a href="Tooltip.html">Tooltip</a></li><li><a href="Topbar.html">Topbar</a></li><li><a href="UserCellDropdown.html">UserCellDropdown</a></li><li><a href="UserDropdown.html">UserDropdown</a></li><li><a href="Users.html">Users</a></li><li><a href="Workload.html">Workload</a></li><li><a href="WorkloadUpload.html">WorkloadUpload</a></li></ul><h3>Global</h3><ul><li><a href="global.html#calcWidth">calcWidth</a></li><li><a href="global.html#encodeQuery">encodeQuery</a></li><li><a href="global.html#get">get</a></li><li><a href="global.html#getAuditoriums">getAuditoriums</a></li><li><a href="global.html#getCookie">getCookie</a></li><li><a href="global.html#getCurrentModuleInfo">getCurrentModuleInfo</a></li><li><a href="global.html#getExams">getExams</a></li><li><a href="global.html#getForms">getForms</a></li><li><a href="global.html#getHeaders">getHeaders</a></li><li><a href="global.html#getLinks">getLinks</a></li><li><a href="global.html#getLogout">getLogout</a></li><li><a href="global.html#getModuleInfo">getModuleInfo</a></li><li><a href="global.html#getModules">getModules</a></li><li><a href="global.html#getRestrctions">getRestrctions</a></li><li><a href="global.html#getResultsParameters">getResultsParameters</a></li><li><a href="global.html#getResultsRestrctions">getResultsRestrctions</a></li><li><a href="global.html#getRoutes">getRoutes</a></li><li><a href="global.html#getTable">getTable</a></li><li><a href="global.html#getTeachers">getTeachers</a></li><li><a href="global.html#getUserInfo">getUserInfo</a></li><li><a href="global.html#getUserToken">getUserToken</a></li><li><a href="global.html#getUsers">getUsers</a></li><li><a href="global.html#getWorkloads">getWorkloads</a></li><li><a href="global.html#linkSort">linkSort</a></li><li><a href="global.html#makeTooltip">makeTooltip</a></li><li><a href="global.html#patch">patch</a></li><li><a href="global.html#patchExam">patchExam</a></li><li><a href="global.html#patchUserRole">patchUserRole</a></li><li><a href="global.html#patchWorkload">patchWorkload</a></li><li><a href="global.html#post">post</a></li><li><a href="global.html#postCSV">postCSV</a></li><li><a href="global.html#postForm">postForm</a></li><li><a href="global.html#postLoginToUser">postLoginToUser</a></li><li><a href="global.html#toLessons">toLessons</a></li><li><a href="global.html#toRuFormat">toRuFormat</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>components/pages/schedule/editSchedule/EditSchedule.jsx</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import classNames from "classnames";
+import styles from "./EditSchedule.module.css";
+import global_styles from "../../../../styles/global.module.css";
+import StaticPage from "../../common/staticPage/StaticPage";
+
+import Tools from "./tools/Tools";
+import Features from "./features/Features";
+import Planner from "./planner/Planner";
+import Topbar from "./topbar/Topbar";
+import { useDispatch, useSelector } from "react-redux";
+import { getExams, patchExam } from "./requests";
+import lodash from "lodash";
+import { getCurrentModuleInfo, getModuleInfo } from "../../polling/requests";
+import {
+  setDefaultRange,
+  setDisabledEdit,
+  setSelectedRange,
+} from "../../../../store/sheduleSlice";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { ThreeDots } from "react-loader-spinner";
+
+/**
+ * Компонент страницы Редактирование расписания
+ * @component
+ */
+const EditSchedule = () => {
+  const localExams = useSelector((state) => state.schedule.events);
+  const disabledEdit = useSelector((state) => state.schedule.disabledEdit);
+  const module = useLocation().pathname.split("/").pop();
+
+  const selectedRole = localStorage.getItem("selectedRole");
+
+  const dispatcher = useDispatch();
+
+  useEffect(() => {
+    getModuleInfo(module).then((info) => {
+      const tmp = {
+        from: new Date(info.session_start),
+        to: new Date(info.session_end),
+      };
+
+      dispatcher(setDefaultRange(tmp));
+      dispatcher(setSelectedRange(tmp));
+    });
+  }, []);
+
+  useEffect(() => {
+    getCurrentModuleInfo().then((info) => {
+      dispatcher(setDisabledEdit(false));
+      // if (
+      //   `${info.year}-${info.number}` !== module ||
+      //   selectedRole === "Преподаватель"
+      // ) {
+      //   dispatcher(setDisabledEdit(true));
+      // } else {
+      //   dispatcher(setDisabledEdit(false));
+      // }
+    });
+  }, [selectedRole]);
+
+  /**
+   * Функция сохранения изменений в экзаменах
+   */
+  const saveChanges = () => {
+    getExams(module).then((dbExams) => {
+      localExams.forEach((localExam) => {
+        const dbExam = dbExams.find((exam) => exam.id === localExam.id);
+        if (!lodash.isEqual(localExam, dbExam)) {
+          patchExam(
+            localExam.id,
+            localExam.start,
+            localExam.end,
+            localExam.format,
+            localExam.auditorium.split(" ")[0],
+            localExam.note
+          );
+        }
+      });
+    });
+  };
+
+  return (
+    &lt;StaticPage>
+      {localExams.length === 0 &amp;&amp; (
+        &lt;div className={styles.loading_wrapper}>
+          &lt;ThreeDots
+            visible
+            height="90"
+            width="90"
+            color="#FF8000"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        &lt;/div>
+      )}
+      &lt;div
+        className={classNames(styles.content, {
+          [styles.hidden]: localExams.length === 0,
+        })}
+      >
+        &lt;Tools />
+        &lt;div className={styles.main}>
+          &lt;div
+            className={classNames(global_styles.white_rounded_box, styles.left)}
+          >
+            &lt;Topbar />
+            &lt;div className={styles.divider} />
+            &lt;div className={styles.planner_wrapper}>
+              &lt;Planner />
+            &lt;/div>
+          &lt;/div>
+          &lt;div className={styles.right}>
+            &lt;Features />
+            {!disabledEdit &amp;&amp; (
+              &lt;div
+                className={classNames(
+                  global_styles.white_rounded_box,
+                  styles.btn_container
+                )}
+              >
+                &lt;button
+                  className={classNames(global_styles.btn_orange, styles.btn)}
+                  onClick={saveChanges}
+                >
+                  Сохранить изменения
+                &lt;/button>
+              &lt;/div>
+            )}
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/StaticPage>
+  );
+};
+
+export default EditSchedule;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.3</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+
+</body>
+</html>
